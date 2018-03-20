@@ -1,0 +1,1 @@
+{"version":3,"file":"hello-word.js","sourceRoot":"","sources":["../../src/routes/hello-word.ts"],"names":[],"mappings":";;AAEA,mBAAyB,MAAc;IACnC,MAAM,CAAC,KAAK,CAAC;QACT,MAAM,EAAE,KAAK;QACb,IAAI,EAAE,aAAa;QACnB,OAAO,CAAC,OAAgB,EAAE,CAAkB;YACxC,MAAM,CAAC;gBACH,UAAU,EAAE,GAAG;gBACf,OAAO,EAAE,IAAI;gBACb,IAAI,EAAE,OAAO;aAChB,CAAA;QACL,CAAC;KACJ,CAAC,CAAC;AACP,CAAC;AAZD,4BAYC"}
