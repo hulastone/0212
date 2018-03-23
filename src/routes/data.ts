@@ -5,7 +5,7 @@ import { MailService } from '../mail/mailservice';
 export default function (server: Server) {
     server.route({
         method: 'POST',
-        path: '/data',
+        path: '/mail',
         handler(request: Request, h: ResponseToolkit) {
 
             //   const query = typeof request.query === 'string' ? qs.parse(request.query) : request.query;

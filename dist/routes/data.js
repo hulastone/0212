@@ -4,7 +4,7 @@ const mailservice_1 = require("../mail/mailservice");
 function default_1(server) {
     server.route({
         method: 'POST',
-        path: '/data',
+        path: '/mail',
         handler(request, h) {
             //   const query = typeof request.query === 'string' ? qs.parse(request.query) : request.query;
             const content = request.payload;
