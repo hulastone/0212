@@ -5,11 +5,11 @@ import { MailService } from '../mail/mailservice';
 export default function (server: Server) {
     server.route({
         method: 'POST',
-        path: '/mail',
+        path: '/data',
         handler(request: Request, h: ResponseToolkit) {
 
             //   const query = typeof request.query === 'string' ? qs.parse(request.query) : request.query;
-
+            
             const content = request.payload as { to: string; subject: string; body: string }           
 
             var to = content.to;
@@ -21,7 +21,7 @@ export default function (server: Server) {
             return {
                 statusCode: 200,
                 message: 'OK',
-                data: '',
+                data: 'fdsfdsf',
             }
         }
     });

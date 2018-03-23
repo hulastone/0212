@@ -12,15 +12,17 @@ import helloWork from './routes/hello-word';
 //     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
 //     console.log('body:', body); // Print the HTML for the Google homepage.
 // });
-//const person = new Person('Phuong', 32);
-//console.log(person.toString());
+const person = new Person('Phuong', 32);
+console.log(person.toString());
 
 
 const server = new Server({
     host: '0.0.0.0',
-    port: 8080
+    port: 80
 });
-data(server);
+
+
 helloWork(server);
+data(server);
 
 server.start();
