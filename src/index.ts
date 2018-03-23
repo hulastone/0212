@@ -6,6 +6,8 @@ import request from 'request';
 import { Server, ResponseToolkit, Request } from 'hapi';
 import data from './routes/data';
 import helloWork from './routes/hello-word';
+import * as cluster from 'cluster';
+import * as os from 'os';
 
 // request('http://www.google.com', function (error: Error, response: any, body: any) {
 //     console.log('error:', error); // Print the error if one occurred
@@ -16,13 +18,23 @@ const person = new Person('Phuong', 32);
 console.log(person.toString());
 
 
-const server = new Server({
-    host: '0.0.0.0',
-    port: 80
-});
+if (cluster.isMaster) {
+    for (const item of os.cpus()) {
+        const worker = cluster.fork();
+    }
+    /*cluster.on('exit', () => {
+        console.log('Worker die. Fork new.')
+        cluster.fork();
+    })*/
+} else {
+    const server = new Server({
+        host: '0.0.0.0',
+        port: 80
+    });
 
 
-helloWork(server);
-data(server);
+    helloWork(server);
+    data(server);
 
-server.start();
+    server.start();
+}

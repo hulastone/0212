@@ -1,10 +1,11 @@
 var Service = require('node-linux').Service;
- 
+import * as path from 'path' ;
+
 // Create a new service object 
 var svc = new Service({
   name:'Hello World',
   description: 'The nodejs.org example web server.',
-  script: './index.ts'
+  script: path.join(__dirname, 'index.ts')
 });
 
 // Listen for the "install" event, which indicates the 
