@@ -18,7 +18,7 @@ import helloWork from './routes/hello-word';
 
 const server = new Server({
     host: '0.0.0.0',
-    port: 80
+    port: 8080
 });
 data(server);
 helloWork(server);

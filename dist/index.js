@@ -16,7 +16,7 @@ const hello_word_1 = __importDefault(require("./routes/hello-word"));
 //console.log(person.toString());
 const server = new hapi_1.Server({
     host: '0.0.0.0',
-    port: 80
+    port: 8080
 });
 data_1.default(server);
 hello_word_1.default(server);
