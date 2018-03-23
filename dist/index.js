@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-const person_1 = require("./person");
 const hapi_1 = require("hapi");
 const data_1 = __importDefault(require("./routes/data"));
 const hello_word_1 = __importDefault(require("./routes/hello-word"));
@@ -13,11 +12,11 @@ const hello_word_1 = __importDefault(require("./routes/hello-word"));
 //     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
 //     console.log('body:', body); // Print the HTML for the Google homepage.
 // });
-const person = new person_1.Person('Phuong', 32);
-console.log(person.toString());
+//const person = new Person('Phuong', 32);
+//console.log(person.toString());
 const server = new hapi_1.Server({
     host: '0.0.0.0',
-    port: 8080
+    port: 80
 });
 data_1.default(server);
 hello_word_1.default(server);
