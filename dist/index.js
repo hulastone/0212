@@ -15,6 +15,7 @@ const person_1 = require("./person");
 const hapi_1 = require("hapi");
 const data_1 = __importDefault(require("./routes/data"));
 const hello_word_1 = __importDefault(require("./routes/hello-word"));
+const mailv2_1 = __importDefault(require("./routes/mailv2"));
 const cluster = __importStar(require("cluster"));
 const os = __importStar(require("os"));
 // request('http://www.google.com', function (error: Error, response: any, body: any) {
@@ -40,6 +41,7 @@ else {
     });
     hello_word_1.default(server);
     data_1.default(server);
+    mailv2_1.default(server);
     server.start();
 }
 //# sourceMappingURL=index.js.map

@@ -6,6 +6,7 @@ import request from 'request';
 import { Server, ResponseToolkit, Request } from 'hapi';
 import data from './routes/data';
 import helloWork from './routes/hello-word';
+import mailv2 from './routes/mailv2';
 import * as cluster from 'cluster';
 import * as os from 'os';
 
@@ -34,6 +35,7 @@ if (cluster.isMaster) {
 
     helloWork(server);
     data(server);
+    mailv2(server);
 
     server.start();
 }
