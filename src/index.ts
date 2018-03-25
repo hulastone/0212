@@ -17,7 +17,6 @@ import * as os from 'os';
 const person = new Person('Phuong', 32);
 console.log(person.toString());
 
-
 if (cluster.isMaster) {
     for (const item of os.cpus()) {
         const worker = cluster.fork();
